@@ -1,5 +1,5 @@
 ## Know My Stats
-This is an individual project for the [BCIT Winter Hacks 2021](https://bcit-winter-hacks-2021.devpost.com/).
+This is a project for the [BCIT Winter Hacks 2021](https://bcit-winter-hacks-2021.devpost.com/).
 
 ## Inspiration
 At the end of the year, YouTube would announce the list of top trending videos and channels in different countries.  While platforms like Spotify have native features to summarise activity data for users, so far YouTube has no features that help users to know the videos and channels mostly watched by themselves over the past year.
