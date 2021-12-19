@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import store from './store';
+import Dropzone from "./DropZone";
+import NavBar from "./NavBar";
+import TabComponent from "./Tabs";
+import { connect } from 'react-redux';
+import SetDateRange from './SetDateRange';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <div>
+        <div className="mt-5">
+          {store.getState().data.length > 0
+            ?
+            <div className="px-3">
+              <SetDateRange />
+              <TabComponent />
+            </div>
+            : <Dropzone />
+          }
+        </div>
+      </div>
+    </>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({ state });
+
+export default connect(mapStateToProps)(App);;
